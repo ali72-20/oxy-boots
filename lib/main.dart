@@ -43,7 +43,8 @@ class OXYBOOTS extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: AppRoutsName.splash,
+        initialRoute: AppRoutsName.onBoarding,
+
         navigatorKey: navKey,
         localizationsDelegates: const [
           AppLocalizations.delegate,
@@ -51,6 +52,7 @@ class OXYBOOTS extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
+
         supportedLocales: L10n.all,
         onGenerateRoute: AppRouts.onGenerateRout,
         locale: appLocale.getCurrentLocal() == AppConstKeys.englishLocaleKey

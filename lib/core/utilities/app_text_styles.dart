@@ -15,4 +15,24 @@ class AppTextStyles{
     color: AppColors.white,
     fontFamily: FontFamily.airbnbCereal,
   );
+
+  static TextStyle font20W400 = TextStyle(
+    fontFamily: FontFamily.airbnbCereal,
+    fontSize: 20.sp,
+    fontWeight: AppFontWeights.w400,
+    color: AppColors.secondaryText
+  );
+
+  static TextStyle font40W500 = TextStyle(
+    fontFamily: FontFamily.airbnbCereal,
+    fontSize: 40.sp,
+    fontWeight: AppFontWeights.w500,
+  );
+
+  static TextStyle font18W500 = TextStyle(
+    fontSize: 18.sp,
+    fontFamily: FontFamily.airbnbCereal,
+    fontWeight: AppFontWeights.w500,
+    color: AppColors.white
+  );
 }

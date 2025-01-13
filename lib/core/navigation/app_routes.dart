@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:oxy_boots/core/navigation/app_routes_name.dart';
+import 'package:oxy_boots/src/presentation/pages/login/login_screen.dart';
+import 'package:oxy_boots/src/presentation/pages/on_boarding/on_boarding_screen.dart';
 import 'package:oxy_boots/src/presentation/pages/splash/splash_screen.dart';
 
 class AppRouts {
@@ -11,6 +13,11 @@ class AppRouts {
       case AppRoutsName.splash:
         return _handelMaterialPageRoute(
             settings: settings, widget: const SplashScreen());
+      case AppRoutsName.onBoarding:
+        return _handelMaterialPageRoute(
+            widget: OnBoardingScreen(), settings: settings);
+      case AppRoutsName.login:
+        return _handelMaterialPageRoute(widget: LoginScreen(), settings: settings);
       default:
         return _handelMaterialPageRoute(
             settings: settings, widget: const Scaffold());

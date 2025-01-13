@@ -13,6 +13,11 @@ class AppThemData {
         ),
       ),
     ),
+    textTheme: TextTheme(
+      bodyLarge: TextStyle(
+        color: AppColorsLight.textPrimaryColor,
+      ),
+    )
   );
 
   static ThemeData dark = ThemeData(
@@ -25,5 +30,10 @@ class AppThemData {
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(50))),
       ),
     ),
+      textTheme: TextTheme(
+        bodyLarge: TextStyle(
+          color: AppColorsDark.textPrimaryColor,
+        ),
+      )
   );
 }

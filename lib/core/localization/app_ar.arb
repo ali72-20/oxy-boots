@@ -1,3 +1,11 @@
 {
-  "app_name": "OXY BOOTS"
+  "app_name": "OXY BOOTS",
+  "onBoarding1_title": "ابدأ الرحلة مع نايك",
+  "onBoarding1_description": "مجموعة ذكية ورائعة وأنيقة",
+  "getStarted": "ابدأ",
+  "next": "التالي",
+  "onBoarding2_title": "اتبع أحدث أنماط الأحذية",
+  "onBoarding2_description": "هناك العديد من النباتات الجميلة والجذابة لغرفتك",
+  "onBoarding3_title": "أحذية الصيف نايك 2022",
+  "onBoarding3_description": "أميت مينيم ليت نوديسير ساكو ناندو سيت أليك دولور"
 }

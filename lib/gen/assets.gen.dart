@@ -9,8 +9,40 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/on_boarding1.png
+  AssetGenImage get onBoarding1 =>
+      const AssetGenImage('assets/images/on_boarding1.png');
+
+  /// File path: assets/images/on_boarding2.png
+  AssetGenImage get onBoarding2 =>
+      const AssetGenImage('assets/images/on_boarding2.png');
+
+  /// File path: assets/images/on_boarding3.png
+  AssetGenImage get onBoarding3 =>
+      const AssetGenImage('assets/images/on_boarding3.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [onBoarding1, onBoarding2, onBoarding3];
+}
+
+class $AssetsSvgLightGen {
+  const $AssetsSvgLightGen();
+
+  /// File path: assets/svg_light/nike.svg
+  String get nike => 'assets/svg_light/nike.svg';
+
+  /// List of all assets
+  List<String> get values => [nike];
+}
+
 class Assets {
   Assets._();
+
+  static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsSvgLightGen svgLight = $AssetsSvgLightGen();
 }
 
 class AssetGenImage {

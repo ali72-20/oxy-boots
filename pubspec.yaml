@@ -49,6 +49,8 @@ dependencies:
   intl: any
   shimmer: ^2.0.0
   google_fonts: ^6.2.1
+  bloc: ^9.0.0
+  smooth_page_indicator: ^1.2.0+3
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -88,6 +90,8 @@ flutter:
   assets:
      - assets/icons/
      - assets/images/
+     - assets/svg_light/
+     - assets/svg_dark/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

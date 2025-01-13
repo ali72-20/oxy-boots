@@ -6,4 +6,5 @@ class AppConstKeys{
   static const String appThemeKey = "appTheme";
   static const String lightThemeKey = "light";
   static const String darkThemeKey = "dark";
+  static const String onBoardingKey = "onBoarding";
 }
