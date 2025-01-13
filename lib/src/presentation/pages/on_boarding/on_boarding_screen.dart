@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/gestures.dart';

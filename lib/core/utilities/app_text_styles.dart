@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:oxy_boots/core/utilities/app_colors.dart';
 import 'package:oxy_boots/core/utilities/app_font_weights.dart';
-import 'package:oxy_boots/gen/assets.gen.dart';
 import 'package:oxy_boots/gen/fonts.gen.dart';
 
 

@@ -1,5 +1,4 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:oxy_boots/core/extensions/extensions.dart';
 import 'package:oxy_boots/core/utilities/app_colors.dart';
