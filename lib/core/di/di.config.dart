@@ -8,25 +8,25 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:get_it/get_it.dart' as _i174;
-import 'package:injectable/injectable.dart' as _i526;
+import 'package:get_it/get_it.dart' as _i1;
+import 'package:injectable/injectable.dart' as _i2;
 
-import '../providers/language_provirder.dart' as _i380;
-import '../providers/theme_provider.dart' as _i522;
+import '../providers/language_provirder.dart' as _i3;
+import '../providers/theme_provider.dart' as _i4;
 
-extension GetItInjectableX on _i174.GetIt {
+extension GetItInjectableX on _i1.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
-  _i174.GetIt init({
+  _i1.GetIt init({
     String? environment,
-    _i526.EnvironmentFilter? environmentFilter,
+    _i2.EnvironmentFilter? environmentFilter,
   }) {
-    final gh = _i526.GetItHelper(
+    final gh = _i2.GetItHelper(
       this,
       environment,
       environmentFilter,
     );
-    gh.singleton<_i380.LanguageProvider>(() => _i380.LanguageProvider());
-    gh.singleton<_i522.ThemeProvider>(() => _i522.ThemeProvider());
+    gh.singleton<_i3.LanguageProvider>(() => _i3.LanguageProvider());
+    gh.singleton<_i4.ThemeProvider>(() => _i4.ThemeProvider());
     return this;
   }
 }
