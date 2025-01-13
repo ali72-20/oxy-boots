@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:oxy_boots/core/extensions/extensions.dart';
@@ -12,9 +13,12 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.primary,
       body: Center(
-        child: Text(
-          context.localization.app_name,
-          style: AppTextStyles.logoStyle,
+        child: FadeIn(
+          duration: const Duration(seconds: 2),
+          child: Text(
+            context.localization.app_name,
+            style: AppTextStyles.logoStyle,
+          ),
         ),
       ),
     );

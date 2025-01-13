@@ -15,19 +15,24 @@ import 'core/utilities/thems.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   configureDependencies();
-  runApp(MultiProvider(
-    providers: [
-      ChangeNotifierProvider<LanguageProvider>(
-          create: (_) => getIt<LanguageProvider>()),
-    ],
-    child: const OXYBOOTS(),
-  ),
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<LanguageProvider>(
+            create: (context) => getIt<LanguageProvider>()),
+        ChangeNotifierProvider<ThemeProvider>(
+            create: (context) => getIt<ThemeProvider>())
+      ],
+      child: const OXYBOOTS(),
+    ),
   );
 }
 
 final GlobalKey<NavigatorState> navKey = GlobalKey<NavigatorState>();
+
 class OXYBOOTS extends StatelessWidget {
   const OXYBOOTS({super.key});
+
   @override
   Widget build(BuildContext context) {
     var appLocale = Provider.of<LanguageProvider>(context);
@@ -36,16 +41,16 @@ class OXYBOOTS extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (context,child) => MaterialApp(
+      builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         initialRoute: AppRoutsName.splash,
         navigatorKey: navKey,
-         localizationsDelegates: const [
-            AppLocalizations.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-         ],
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
         supportedLocales: L10n.all,
         onGenerateRoute: AppRouts.onGenerateRout,
         locale: appLocale.getCurrentLocal() == AppConstKeys.englishLocaleKey
@@ -57,5 +62,4 @@ class OXYBOOTS extends StatelessWidget {
       ),
     );
   }
-
 }

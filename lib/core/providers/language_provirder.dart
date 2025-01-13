@@ -7,17 +7,6 @@ import 'package:oxy_boots/core/helpers/shared_pref_helpers.dart';
 class LanguageProvider extends ChangeNotifier {
   String _currentAppLocale = AppConstKeys.englishLocaleKey;
 
-  LanguageProvider() {
-    SharedPrefHelper.getString(AppConstKeys.appLocaleKey).then((value) {
-      if (value == null) {
-        SharedPrefHelper.setDate(AppConstKeys.appLocaleKey, _currentAppLocale);
-      } else {
-        _currentAppLocale = value;
-        notifyListeners();
-      }
-    });
-  }
-
   /// change the app locale
   /// if the new locale is current app local nothing happen
   /// parameters [locale] the new locale

@@ -8,17 +8,6 @@ import '../helpers/shared_pref_helpers.dart';
 class ThemeProvider extends ChangeNotifier {
   String _currentTheme = AppConstKeys.lightThemeKey;
 
-  ThemeProvider() {
-    SharedPrefHelper.getString(AppConstKeys.appThemeKey).then((value) {
-      if (value != null) {
-        _currentTheme = value;
-        notifyListeners();
-      }else{
-        SharedPrefHelper.setDate(AppConstKeys.appThemeKey, _currentTheme);
-      }
-    });
-  }
-
   Future<void> changeTheme() async {
     if (_currentTheme == AppConstKeys.lightThemeKey) {
       _currentTheme = AppConstKeys.darkThemeKey;
