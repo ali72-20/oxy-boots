@@ -47,60 +47,65 @@ class OnBoardingScreen extends StatelessWidget {
     return BlocProvider(
       create: (_) => viewModel,
       child: Scaffold(
-        body: BlocConsumer<OnBoardingViewModel, OnBoardingStates>(
-            builder: (context, state) {
-              return Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 80),
-                child: Column(
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 80),
+          child: Column(
+            children: [
+              SizedBox(
+                height: context.height * 0.7,
+                child: PageView.builder(
+                  itemCount: 3,
+                  controller: viewModel.onBoardingController,
+                  dragStartBehavior: DragStartBehavior.start,
+                  itemBuilder: (context, index) {
+                    viewModel.doAction(LastPageAction(index: index));
+                    return _page(context, _pages[index]);
+                  },
+                ),
+              ),
+              verticalSpace(32),
+              FadeInUp(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SizedBox(
-                      height: context.height * 0.7,
-                      child: PageView.builder(
-                        itemCount: 3,
-                        controller: viewModel.onBoardingController,
-                        dragStartBehavior: DragStartBehavior.start,
-                        itemBuilder: (context, index) {
-                          viewModel.doAction(LastPageAction(index: index));
-                          return _page(context, _pages[index]);
-                        },
-                      ),
-                    ),
-                    verticalSpace(32),
-                    FadeInUp(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          _slideIndicator(viewModel.onBoardingController),
-                          ElevatedButton(
-                            onPressed: () {
-                              if (state is LastPageState) {
-                                viewModel.doAction(NavigateToLoginAction());
-                              } else {
-                                viewModel.onBoardingController.nextPage(
-                                    duration: Duration(milliseconds: 300),
-                                    curve: Curves.easeIn);
-                              }
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  vertical: 16, horizontal: 8),
-                              child: Text(_buttonText,
-                                  style: AppTextStyles.font18W500),
-                            ),
-                          )
-                        ],
-                      ),
+                    _slideIndicator(viewModel.onBoardingController),
+                    BlocConsumer<OnBoardingViewModel, OnBoardingStates>(
+                      builder: (context, state) {
+                        if (state is LastPageState) {
+                          _buttonText = context.localization.getStarted;
+                        } else if (state is NotLastPageState) {
+                          _buttonText = context.localization.next;
+                        }
+                        return ElevatedButton(
+                          onPressed: () {
+                            if (state is LastPageState) {
+                              viewModel.doAction(NavigateToLoginAction());
+                            } else {
+                              viewModel.onBoardingController.nextPage(
+                                  duration: Duration(milliseconds: 300),
+                                  curve: Curves.easeIn);
+                            }
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 16, horizontal: 8),
+                            child: Text(_buttonText,
+                                style: AppTextStyles.font18W500),
+                          ),
+                        );
+                      },
+                      listener: (context, state) {
+                        if (state is NavigateToLoginState) {
+                          navKey.currentState!.pushNamed(AppRoutsName.login);
+                        }
+                      },
                     )
                   ],
                 ),
-              );
-            },
-            listener: (context, state) {
-              if (state is NavigateToLoginState){
-                navKey.currentState!.pushNamed(AppRoutsName.login);
-              }
-            },),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
