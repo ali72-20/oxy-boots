@@ -51,7 +51,6 @@ dependencies:
   google_fonts: ^6.2.1
   bloc: ^9.0.0
   smooth_page_indicator: ^1.2.0+3
-  flutter_localizations: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
