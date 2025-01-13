@@ -6,6 +6,7 @@ import 'package:oxy_boots/core/navigation/app_routes_name.dart';
 import 'package:oxy_boots/core/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'core/di/di.dart';
 import 'core/localization/l10n.dart';
 import 'core/providers/language_provirder.dart';
