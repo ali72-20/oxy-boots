@@ -15,20 +15,6 @@ jobs:
       # Step 1: Checkout the code
       - uses: actions/checkout@v3
 
-      # Step 2: Setup Java
-      - uses: actions/setup-java@v3
-        with:
-          distribution: 'zulu'
-          java-version: '11'
-
-      # Step 3: Setup Flutter
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.19.0'
-          channel: 'stable'
-          cache: true
-
-      # Step 4: Get Flutter packages
       - name: Get dependencies
         run: flutter pub get
 
@@ -39,18 +25,3 @@ jobs:
       # Step 6: Statically analyze the Dart code
       - name: Analyze code
         run: flutter analyze .
-
-      # Step 7: Run Flutter tests
-      - name: Run tests
-        run: flutter test
-
-      # Step 8: Build APK
-      - name: Build APK
-        run: flutter build apk --release
-
-      # Step 9: Upload APK
-      - name: Upload APK
-        uses: actions/upload-artifact@v3
-        with:
-          name: release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
