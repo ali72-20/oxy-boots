@@ -1,0 +1,27 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the code
+      - uses: actions/checkout@v3
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      # Step 5: Check for any formatting issues
+      - name: Check formatting
+        run: dart format --set-exit-if-changed .
+
+      # Step 6: Statically analyze the Dart code
+      - name: Analyze code
+        run: flutter analyze .
