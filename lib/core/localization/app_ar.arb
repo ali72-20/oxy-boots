@@ -7,5 +7,14 @@
   "onBoarding2_title": "اتبع أحدث أنماط الأحذية",
   "onBoarding2_description": "هناك العديد من النباتات الجميلة والجذابة لغرفتك",
   "onBoarding3_title": "أحذية الصيف نايك 2022",
-  "onBoarding3_description": "أميت مينيم ليت نوديسير ساكو ناندو سيت أليك دولور"
+  "onBoarding3_description": "أميت مينيم ليت نوديسير ساكو ناندو سيت أليك دولور",
+  "helloAgain": "مرحبًا مجددًا!",
+  "welcomeBack": "مرحبًا بك عدت، لقد اشتقنا إليك!",
+  "emailAddress": "عنوان البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "recoverPassword": "استعادة كلمة المرور",
+  "signIn": "تسجيل الدخول",
+  "signInWithGoogle": "تسجيل الدخول بواسطة جوجل",
+  "dontHaveAccount": "ليس لديك حساب؟",
+  "signUpForFree": "سجل مجانًا"
 }

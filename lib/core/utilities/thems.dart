@@ -17,6 +17,23 @@ class AppThemData {
       bodyLarge: TextStyle(
         color: AppColorsLight.textPrimaryColor,
       ),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(50),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(50),
+        borderSide: BorderSide(
+          color: AppColorsLight.primary,
+        ),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(50),
+        borderSide: BorderSide(
+          color: AppColorsLight.white,
+        ),
+      ),
     )
   );
 

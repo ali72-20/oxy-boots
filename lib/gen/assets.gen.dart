@@ -31,11 +31,20 @@ class $AssetsImagesGen {
 class $AssetsSvgLightGen {
   const $AssetsSvgLightGen();
 
+  /// File path: assets/svg_light/arrow_back.svg
+  String get arrowBack => 'assets/svg_light/arrow_back.svg';
+
+  /// File path: assets/svg_light/eye.svg
+  String get eye => 'assets/svg_light/eye.svg';
+
+  /// File path: assets/svg_light/google.svg
+  String get google => 'assets/svg_light/google.svg';
+
   /// File path: assets/svg_light/nike.svg
   String get nike => 'assets/svg_light/nike.svg';
 
   /// List of all assets
-  List<String> get values => [nike];
+  List<String> get values => [arrowBack, eye, google, nike];
 }
 
 class Assets {

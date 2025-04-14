@@ -7,5 +7,14 @@
   "onBoarding2_title": "Follow Latest\nStyle Shoes",
   "onBoarding2_description": "There Are Many Beautiful And Attractive Plants To Your Room",
   "onBoarding3_title": "Summer Shoes Nike 2022",
-  "onBoarding3_description": "Amet Minim Lit Nodeseru Saku Nandu sit Alique Dolor"
+  "onBoarding3_description": "Amet Minim Lit Nodeseru Saku Nandu sit Alique Dolor",
+  "helloAgain": "Hello Again!",
+  "welcomeBack": "Welcome Back You’ve Been Missed!",
+  "emailAddress": "Email Address",
+  "password": "Password",
+  "recoverPassword": "Recover Password",
+  "signIn": "Sign In",
+  "signInWithGoogle": "Sign In With Google",
+  "dontHaveAccount": "Don't have an account?",
+  "signUpForFree": "Sign Up For Free"
 }

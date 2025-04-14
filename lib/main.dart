@@ -44,7 +44,6 @@ class OXYBOOTS extends StatelessWidget {
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         initialRoute: AppRoutsName.onBoarding,
-
         navigatorKey: navKey,
         localizationsDelegates: const [
           AppLocalizations.delegate,

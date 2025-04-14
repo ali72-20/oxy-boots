@@ -34,4 +34,21 @@ class AppTextStyles{
     fontWeight: AppFontWeights.w500,
     color: AppColors.white
   );
+
+  static TextStyle font28W500 = TextStyle(
+    fontSize: 28.sp,
+    fontFamily: FontFamily.airbnbCereal,
+    fontWeight: AppFontWeights.w500,
+  );
+  static TextStyle font16W400 = TextStyle(
+    fontSize: 16.sp,
+    fontFamily: FontFamily.airbnbCereal,
+    fontWeight: AppFontWeights.w400,
+    color: AppColors.secondaryText
+  );
+  static TextStyle font16W500 = TextStyle(
+      fontSize: 16.sp,
+      fontFamily: FontFamily.airbnbCereal,
+      fontWeight: AppFontWeights.w500,
+  );
 }
