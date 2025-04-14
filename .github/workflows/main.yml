@@ -1,9 +1,8 @@
 name: Flutter CI
 
 on:
-
   pull_request:
-    branches: [ "dev","main"]
+    branches: [ "main","dev" ]
 
 jobs:
   build:
@@ -14,7 +13,6 @@ jobs:
       # Step 1: Checkout the code
       - uses: actions/checkout@v3
 
-      # Step 4: Get Flutter packages
       - name: Get dependencies
         run: flutter pub get
 
@@ -25,4 +23,3 @@ jobs:
       # Step 6: Statically analyze the Dart code
       - name: Analyze code
         run: flutter analyze .
-
